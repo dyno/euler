@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "euler"
+version = "0.0.2"
+description = "libs to solve https://projecteuler.net problems"
+authors = ["Dyno Fu <dyno.fu@gmail.com>", "Forest Fu <forest.z.fu@gmail.com>"]
+
+[tool.poetry.dependencies]
+absl-py = "*"
+oslash = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
