@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from itertools import compress, count, cycle, islice
+from itertools import compress, count, cycle
 
 
 def naive():
@@ -16,7 +16,7 @@ def naive():
 def erat2():
     D = {}
     yield 2
-    for q in islice(count(3), 0, None, 2):
+    for q in count(3, 2):
         p = D.pop(q, None)
         if p is None:
             D[q * q] = q
@@ -31,7 +31,7 @@ def erat2():
 def erat2a():
     witness = {}
     yield 2
-    for q in islice(count(3), 0, None, 2):
+    for q in count(3, 2):
         p = witness.pop(q, None)
         if p is None:
             witness[q * q] = q
@@ -51,7 +51,7 @@ def erat3():
     yield from (2, 3, 5)
 
     witness = {9: 3, 25: 5}  # map composite integers to primes witnessing their compositeness
-    for q in compress(islice(count(7), 0, None, 2), cycle(MASK)):
+    for q in compress(count(7, 2), cycle(MASK)):
         p = witness.pop(q, None)
         if p is None:
             witness[q * q] = q
