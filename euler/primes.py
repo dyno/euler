@@ -92,20 +92,6 @@ def psieve():
 # module exports
 primes = erat3
 
-if __name__ == '__main__':
-    PRIMES_TWENTY = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
-
-    primes = naive
-    assert list(islice(primes(), 20)) == PRIMES_TWENTY
-    primes = erat2
-    assert list(islice(primes(), 20)) == PRIMES_TWENTY
-    primes = erat2a
-    assert list(islice(primes(), 20)) == PRIMES_TWENTY
-    primes = psieve
-    assert list(islice(primes(), 20)) == PRIMES_TWENTY
-    primes = erat3
-    assert list(islice(primes(), 20)) == PRIMES_TWENTY
-
 # Reference:
 # https://rosettacode.org/wiki/Extensible_primeserator#Python
 # https://stackoverflow.com/questions/2211990/how-to-implement-an-efficient-infinite-generator-of-prime-numbers-in-python/10733621#10733621
