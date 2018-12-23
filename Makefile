@@ -1,7 +1,10 @@
-.PHONY: test build init 
+.PHONY: test build init
+
+problem%:
+	poetry run python solutions/problem$*.py
 
 test:
-	poetry run pytest
+	poetry run pytest --doctest-modules
 
 build:
 	poetry build
