@@ -105,3 +105,10 @@ venv.bak/
 
 *.lock
 solutions
+GPATH
+GRTAGS
+GTAGS
+tags
+
+.idea
+zold
