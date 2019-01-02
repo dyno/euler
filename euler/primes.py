@@ -121,6 +121,8 @@ primes = erat3
 
 def factors(n):
     """Return factors of number n.
+    >>> list(factors(1))
+    []
     >>> list(factors(5))
     [5]
     >>> list(factors(12))
@@ -128,6 +130,8 @@ def factors(n):
     >>> list(factors(140))
     [2, 2, 5, 7]
     """
+    if n <= 1:
+        return
     for p in primes():
         while n % p == 0:
             yield p
@@ -138,6 +142,8 @@ def factors(n):
 
 def divisors(n):
     """Return the devisors divisors of number.
+    >>> list(divisors(1))
+    [1]
     >>> list(divisors(12))
     [1, 2, 3, 4, 6, 12]
     >>> list(divisors(1024))
